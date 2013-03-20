@@ -9,8 +9,9 @@
 
 ## Examples
 
+### Simple Properties
+
 ```js
-// Simple Properties
 var widget = {
   enabled: false
 }
@@ -19,10 +20,11 @@ var setEnabled = set(widget, 'enabled')
 console.log(widget.enabled) // => false
 setEnabled(true)
 console.log(widget.enabled) // => true
+```
 
+### Nested Properties
 
-// Nested Properties
-
+```js
 var user = {
   name: {
     first: 'Tim',
@@ -33,30 +35,35 @@ var user = {
 var setFirstName = set(user, 'name.first')
 setFirstName('Timothy')
 console.log(user.name.first) // =>  'Timothy')
+```
 
-// If intermediate properties do not exist, they are created
+### Intermediate properties are created if they do not exist
 
+```js
 var user = {}
 
 var setFirstName = set(user, 'name.first')
 setFirstName('Timothy')
 console.log(user.name.first) // => 'Timothy'
+```
 
-// context is optional until set() time
+### Context is optional until `set()` time
+```js
 var user = {}
 
 var setFirstName = set('name.first')
 setFirstName(user, 'Timothy')
 console.log(user.name.first) // => 'Timothy'
+```
 
-// context is set to `this` if not supplied
 
+### context is set to `this` if not supplied
+```js
 var user = {}
 
 user.setFirstName = set('name.first')
 user.setFirstName('Timothy')
 console.log(user.name.first) // => 'Timothy'
-
 ```
 
 ## License
