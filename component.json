@@ -1,0 +1,15 @@
+{
+  "name": "set",
+  "repo": "timoxley/set",
+  "description": "Create setter functions from string paths",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {
+    "timoxley/assert": "*"
+  },
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ]
+}
