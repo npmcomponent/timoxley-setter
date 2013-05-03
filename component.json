@@ -2,7 +2,7 @@
   "name": "setter",
   "repo": "timoxley/setter",
   "description": "Create setter functions from string paths",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "keywords": ["function"],
   "dependencies": {},
   "development": {
