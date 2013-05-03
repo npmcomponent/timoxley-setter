@@ -1,15 +1,19 @@
+"use strict"
+
 module.exports = function(context, path) {
   if (arguments.length === 1) {
     path = context
     context = null
   }
+
   function setVal(obj, path, value) {
     var pathSegment = path.shift()
     if (obj[pathSegment] === undefined) obj[pathSegment] = {}
     if (!path.length) return obj[pathSegment] = value
     return setVal(obj[pathSegment], path, value)
   }
-  return function set(theContext, value) {
+
+  return function setter(theContext, value) {
     if (arguments.length === 1) {
       value = theContext
       theContext = context

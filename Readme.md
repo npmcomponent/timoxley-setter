@@ -1,22 +1,23 @@
-
-# set
+# setter
 
   Generate setter functions from string paths.
 
 ## Installation
 
-    $ component install timoxley/set
+    $ component install timoxley/setter
 
 ## Examples
 
 ### Simple Properties
 
 ```js
+var setter = require('setter')
+
 var widget = {
   enabled: false
 }
 
-var setEnabled = set(widget, 'enabled')
+var setEnabled = setter(widget, 'enabled')
 console.log(widget.enabled) // => false
 setEnabled(true)
 console.log(widget.enabled) // => true
@@ -32,7 +33,7 @@ var user = {
   }
 }
 
-var setFirstName = set(user, 'name.first')
+var setFirstName = setter(user, 'name.first')
 setFirstName('Timothy')
 console.log(user.name.first) // =>  'Timothy')
 ```
@@ -42,16 +43,16 @@ console.log(user.name.first) // =>  'Timothy')
 ```js
 var user = {}
 
-var setFirstName = set(user, 'name.first')
+var setFirstName = setter(user, 'name.first')
 setFirstName('Timothy')
 console.log(user.name.first) // => 'Timothy'
 ```
 
-### Context is optional until `set()` time
+### Context is optional until `setter()` time
 ```js
 var user = {}
 
-var setFirstName = set('name.first')
+var setFirstName = setter('name.first')
 setFirstName(user, 'Timothy')
 console.log(user.name.first) // => 'Timothy'
 ```
@@ -61,7 +62,7 @@ console.log(user.name.first) // => 'Timothy'
 ```js
 var user = {}
 
-user.setFirstName = set('name.first')
+user.setFirstName = setter('name.first')
 user.setFirstName('Timothy')
 console.log(user.name.first) // => 'Timothy'
 ```

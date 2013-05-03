@@ -1,9 +1,9 @@
 {
-  "name": "set",
-  "repo": "timoxley/set",
+  "name": "setter",
+  "repo": "timoxley/setter",
   "description": "Create setter functions from string paths",
   "version": "0.0.1",
-  "keywords": [],
+  "keywords": ["function"],
   "dependencies": {},
   "development": {
     "timoxley/assert": "*"
