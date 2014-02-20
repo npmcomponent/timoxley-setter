@@ -1,0 +1,10 @@
+{
+  "name": "timoxley-setter",
+  "description": "Create setter functions from string paths",
+  "version": "0.0.2",
+  "keywords": [
+    "function"
+  ],
+  "dependencies": {},
+  "license": "MIT"
+}
